@@ -42,7 +42,7 @@ explained_variance = pca.explained_variance_ratio_
 #PCA didn't improve accuracy!
 
 from xgboost import XGBClassifier
-classifier = XGBClassifier()
+classifier = XGBClassifier(n_estimators=250)
 classifier.fit(X_train, y_train)
 
 y_pred = classifier.predict(X_test)
